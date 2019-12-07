@@ -109,7 +109,7 @@ export default {
     graphQLSubmit(e){
       e.preventDefault();
       let currentObj = this;
-      this.axios.post('http://localhost/graphql',{
+      this.axios.post('http://ec2-18-209-231-31.compute-1.amazonaws.com/graphql',{
         query: `mutation{
           createUser(
             user:{firstName:"${this.firstName}"
@@ -129,7 +129,7 @@ export default {
     authenticate(e){
       e.preventDefault();
       let currentObj = this;
-      this.axios.post('http://localhost/graphql',{
+      this.axios.post('http://ec2-18-209-231-31.compute-1.amazonaws.com/graphql',{
         query: `mutation{
           authenticate(
             user:{
